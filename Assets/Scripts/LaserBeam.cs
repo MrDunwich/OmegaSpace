@@ -27,18 +27,12 @@ public class LaserBeam : MonoBehaviour
 
         RaycastHit hit;
 
-        if (frameCounter == 2)
+        if (frameCounter == 1)
         {
             ProjectilePool.Instance.AddToPool(gameObject);
             frameCounter = 0;
         }
         else if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out hit, Time.deltaTime * speed)) {
-            if (frameCounter == 1)
-            {
-                frameCounter++;
-                transform.Translate(Vector3.forward * speed * Time.deltaTime);
-                return;
-            }
             hit.rigidbody.AddForceAtPosition(mass * speed * transform.forward, hit.point);
             frameCounter++;
         }

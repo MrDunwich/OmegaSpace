@@ -5,7 +5,7 @@ using UnityEngine;
 public class FireLaser : MonoBehaviour
 {
     private float lastFire;
-    public float fireRate;
+    [SerializeField] private float fireRate;
 
     // Update is called once per frame
     void Update()

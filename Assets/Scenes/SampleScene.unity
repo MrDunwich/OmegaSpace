@@ -6310,6 +6310,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   menuCanvas: {fileID: 1019759053}
+  reloadLevel: SampleScene
 --- !u!1 &920859605
 GameObject:
   m_ObjectHideFlags: 0

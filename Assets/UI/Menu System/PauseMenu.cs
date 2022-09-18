@@ -5,7 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class PauseMenu : MonoBehaviour
 {
-    public Canvas menuCanvas;
+    [SerializeField] private Canvas menuCanvas;
+    [SerializeField] private string reloadLevel;
     private bool menuActive = false;
 
     private void Start()
@@ -32,7 +33,7 @@ public class PauseMenu : MonoBehaviour
 
     public void LoadGame()
     {
-        SceneManager.LoadScene("SampleScene"); //change to variable? change name
+        SceneManager.LoadScene(reloadLevel);
         Time.timeScale = 1;
     }
 
