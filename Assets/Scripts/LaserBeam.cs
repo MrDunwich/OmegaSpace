@@ -6,7 +6,7 @@ public class LaserBeam : MonoBehaviour
 {
     [SerializeField] private float speed = 70f;
     private float endOfLife;
-    private float mass = 15f;
+    private float mass = 20f;
     private int frameCounter = 0;
 
     // Start is called before the first frame update
@@ -34,6 +34,8 @@ public class LaserBeam : MonoBehaviour
         }
         else if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out hit, Time.deltaTime * speed)) {
             hit.rigidbody.AddForceAtPosition(mass * speed * transform.forward, hit.point);
+            SimpleEnemy enemy = hit.collider.GetComponent<SimpleEnemy>();
+            if (enemy) enemy.damage(100f);
             frameCounter++;
         }
         else transform.Translate(Vector3.forward * speed * Time.deltaTime);

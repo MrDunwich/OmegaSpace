@@ -5,11 +5,11 @@ using UnityEngine;
 
 public class SimpleEnemy : MonoBehaviour
 {
-    public float torque = 5f;
-    public float thrust = 80000f;
+    public float torque = 5f, thrust = 80000f, health = 500f;
     private Rigidbody rb;
     public Transform player;
-
+    public GameObject explosion;
+    public ParticleSystem explosionPart;
     public EnemyFire weapon;
 
     // Start is called before the first frame update
@@ -51,5 +51,16 @@ public class SimpleEnemy : MonoBehaviour
         float projectedVectorAngle = Vector3.SignedAngle(projectedVector, toOrientation, planeNormal);
 
         return projectedVectorAngle;
+    }
+
+    public void damage(float damageAmount)
+    {
+        health -= damageAmount;
+        if (health <= 0)
+        {
+            Instantiate(explosion, transform.position, Quaternion.identity);
+            Instantiate(explosionPart, transform.position, Quaternion.identity);
+            Destroy(gameObject);
+        }
     }
 }

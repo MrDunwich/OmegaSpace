@@ -270,7 +270,7 @@ GameObject:
   - component: {fileID: 171044372}
   - component: {fileID: 171044371}
   m_Layer: 0
-  m_Name: Particle System
+  m_Name: StarField
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5137,8 +5137,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   torque: 5
-  thrust: 30
+  thrust: 20
+  health: 200
   player: {fileID: 802324163}
+  explosion: {fileID: 7285108087789962358, guid: 9f46334675217304c8ba6e47bd7f0913, type: 3}
+  explosionPart: {fileID: 1595317587627549008, guid: ee6b4233bcad6044da1a234a1aca4a23, type: 3}
   weapon: {fileID: 1186963362}
 --- !u!54 &172163431
 Rigidbody:
@@ -5599,8 +5602,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   torque: 5
-  thrust: 30
+  thrust: 20
+  health: 200
   player: {fileID: 802324163}
+  explosion: {fileID: 7285108087789962358, guid: 9f46334675217304c8ba6e47bd7f0913, type: 3}
+  explosionPart: {fileID: 1595317587627549008, guid: ee6b4233bcad6044da1a234a1aca4a23, type: 3}
   weapon: {fileID: 510980800}
 --- !u!54 &595130184
 Rigidbody:
@@ -5810,8 +5816,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   torque: 5
-  thrust: 30
+  thrust: 20
+  health: 200
   player: {fileID: 802324163}
+  explosion: {fileID: 7285108087789962358, guid: 9f46334675217304c8ba6e47bd7f0913, type: 3}
+  explosionPart: {fileID: 1595317587627549008, guid: ee6b4233bcad6044da1a234a1aca4a23, type: 3}
   weapon: {fileID: 1770249676}
 --- !u!1001 &698560653
 PrefabInstance:
@@ -6695,8 +6704,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   torque: 5
-  thrust: 30
+  thrust: 20
+  health: 200
   player: {fileID: 802324163}
+  explosion: {fileID: 7285108087789962358, guid: 9f46334675217304c8ba6e47bd7f0913, type: 3}
+  explosionPart: {fileID: 1595317587627549008, guid: ee6b4233bcad6044da1a234a1aca4a23, type: 3}
   weapon: {fileID: 1241819669}
 --- !u!54 &1052984345
 Rigidbody:
